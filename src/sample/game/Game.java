@@ -1,5 +1,6 @@
 package sample.game;
 
+import sample.gfx.SpriteLibrary;
 import sample.input.Input;
 import sample.controller.PlayerController;
 import sample.display.Display;
@@ -16,6 +17,7 @@ public class Game {
     // private Rectangle rectangle;
     private List<GameObject> gameObjects;
     private Input input;
+    private SpriteLibrary spriteLibrary;
 
     public Game(int width, int height) {
         input = new Input();
@@ -24,6 +26,7 @@ public class Game {
 
         gameObjects = new ArrayList<>();
         gameObjects.add(new Player(new PlayerController(input)));
+        spriteLibrary = new SpriteLibrary();
     }
 
     public void update(){
