@@ -27,8 +27,9 @@ public class Game {
         //rectangle = new Rectangle(0,0, 50, 50);
 
         gameObjects = new ArrayList<>();
-        gameObjects.add(new Player(new PlayerController(input), spriteLibrary));
         spriteLibrary = new SpriteLibrary();
+        gameObjects.add(new Player(new PlayerController(input), spriteLibrary));
+
     }
 
     public void update(){
