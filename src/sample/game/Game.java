@@ -13,6 +13,8 @@ import java.util.List;
 
 public class Game {
 
+
+    public static int SPRITE_SIZE = 64;
     private Display display;
     // private Rectangle rectangle;
     private List<GameObject> gameObjects;
@@ -25,7 +27,7 @@ public class Game {
         //rectangle = new Rectangle(0,0, 50, 50);
 
         gameObjects = new ArrayList<>();
-        gameObjects.add(new Player(new PlayerController(input)));
+        gameObjects.add(new Player(new PlayerController(input), spriteLibrary));
         spriteLibrary = new SpriteLibrary();
     }
 
