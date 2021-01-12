@@ -1,6 +1,7 @@
 package sample.display;
 
 import sample.game.Game;
+import sample.game.state.State;
 import sample.input.Input;
 
 import javax.swing.*;
@@ -32,7 +33,7 @@ public class Display extends JFrame {
         setVisible(true);
     }
 
-    public void render(Game game){
+    public void render(State state){
         BufferStrategy bufferStrategy = canvas.getBufferStrategy();
         Graphics graphics = bufferStrategy.getDrawGraphics();
 
@@ -43,7 +44,7 @@ public class Display extends JFrame {
         graphics.setColor(Color.BLUE);
         graphics.fillRect((int)rectangle.getX(), (int)rectangle.getY(), (int)rectangle.getWidth(), (int)rectangle.getHeight());*/
 
-        renderer.render(game, graphics);
+        renderer.render(state, graphics);
 
         graphics.dispose();
         bufferStrategy.show();

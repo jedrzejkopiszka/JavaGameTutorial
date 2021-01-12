@@ -29,6 +29,8 @@ public enum Direction {
         if(x < 0 && y  > 0) return SW;
         if(x < 0 && y < 0) return NW;
 
+        return S;
+
 
     }
 
